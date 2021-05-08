@@ -1,0 +1,10 @@
+{
+  "menu": {
+    "inicio": "home",
+    "contactos": "contacts",
+    "galeria": "gallery",
+    "tours": "tours",
+    "espaniol": "spanish - es",
+    "ingles": "english - en"
+  }
+}

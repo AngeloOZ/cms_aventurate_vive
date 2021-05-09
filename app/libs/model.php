@@ -41,7 +41,7 @@ class Model extends Database
      * @param  mixed $params : parametros de la sentencia a enviar mediante bindParam
      * @return mixed
      */
-    public static function query($sql, $params = []): mixed
+    public static function query($sql, $params = [])
     {
         $sql = trim($sql);
         $link = Database::getConnection();
@@ -65,7 +65,7 @@ class Model extends Database
 
             $id = $link->lastInsertId();
             $link->commit();
-            return $id;
+            return [true, $id];
 
         } elseif (stripos($sql, 'UPDATE') !== false) {
 

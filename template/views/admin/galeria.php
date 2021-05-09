@@ -49,43 +49,28 @@
                         <div class="x_content">
                            <div class="row">
                            </div>
-                           <div class="row">
-                              <!-- image -->
+                           <div class="row" id="contenedor_galeria">
+                              <!-- images -->
+                              <?php foreach ($params as $key => $photo) : ?>
                               <div class="col-md-55">
                                  <div class="thumbnail">
-                                    <div class="image view view-first">
-                                       <img style="width: 100%; display: block;" src="<?php echo IMAGES . 'admin/media.jpg'; ?>" alt="image" />
+                                    <div class="image view view-first" data-id-photo="<?php echo $photo["id_photo"]; ?>">
+                                       <img loading="lazy" style="width: 100%; display: block;" src="<?php echo $photo["url_photo"] ?>" alt="<?php echo $photo["caption_photo"]; ?>" />
                                        <div class="mask">
-                                          <p>Your Text</p>
+                                          <p><?php echo $photo["caption_photo"]; ?></p>
                                           <div class="tools tools-bottom">
-                                             <a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="fa fa-pencil"></i></a>
+                                             <a class="btn_edit_photos" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="fa fa-pencil"></i></a>
+                                             <a href="#"><i class="fa fa-times"></i></a>
                                           </div>
                                        </div>
                                     </div>
                                     <div class="caption">
-                                       <p>Snow and Ice Incoming for the South</p>
+                                       <p><?php echo $photo["caption_photo"]; ?></p>
                                     </div>
                                  </div>
                               </div>
-                              <!-- image />-->
-                              <!-- image -->
-                              <div class="col-md-55">
-                                 <div class="thumbnail">
-                                    <div class="image view view-first">
-                                       <img style="width: 100%; display: block;" src="<?php echo IMAGES . 'admin/media.jpg'; ?>" alt="image" />
-                                       <div class="mask">
-                                          <p>Your Text</p>
-                                          <div class="tools tools-bottom">
-                                             <a href="#" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="fa fa-pencil"></i></a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="caption">
-                                       <p>Snow and Ice Incoming for the South</p>
-                                    </div>
-                                 </div>
-                              </div>
-                              <!-- image />-->
+                              <?php endforeach; ?>
+                              <!-- images />-->
                            </div>
                         </div>
                      </div>
@@ -116,13 +101,12 @@
                               <label for="url">URL</label>
                               <input type="radio" name="typeUpload" id="url" class="type-up-file">
                            </div>
-
                         </div>
                         <div class="item form-group">
                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="input-desc-photo">Descripción<span class="required">*</span>
                            </label>
                            <div class="col-md-6 col-sm-6 ">
-                              <input type="text" id="input-desc-photo" name="input-desc-photo" required="required" class="form-control" placeholder="Descripción de foto">
+                              <input type="text" id="input_desc_photo" name="input_desc_photo" required="required" class="form-control" placeholder="Descripción de foto">
                            </div>
                         </div>
                         <div class="item form-group">
@@ -132,23 +116,22 @@
                               <input type="file" id="input_file_photo" name="input_file_photo" required="required" class="form-control">
                            </div>
                         </div>
+                        <input type="hidden" name="input_id_photo" id="input_id_photo">
                         <div class="ln_solid"></div>
-                        <div class="item form-group">
-                           <div class="col-md-6 col-sm-6 offset-md-3">
-                              <button class="btn btn-primary" type="button">Cancelar</button>
+                        <div class="item form-group ">
+                           <div class="col-md-6 col-sm-6 offset-md-3 alignright">
                               <button class="btn btn-primary" type="reset">Limpiar</button>
                               <button type="submit" class="btn btn-success">Guardar</button>
                            </div>
                         </div>
                      </form>  
                      <div class="ln_solid"></div>
-                     <div id="preview_photo" class="preview_photo" style="display: none;">
-                        <h3>Vista previa de la foto</h3>
-                        <img src="" alt="">
+                     <div id="preview_photo" class="preview_photo">
+                        <img id="preview_photo_img" src="" alt="">
                      </div>
                   </div>
                   <div class="modal-footer">
-                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                     <button type="button" class="btn btn-default close_modal" data-dismiss="modal">Close</button>
                   </div>
                </div>
             </div>

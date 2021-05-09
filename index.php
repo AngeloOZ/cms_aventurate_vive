@@ -1,4 +1,5 @@
 <?php 
+    require_once "app/libs/core_function.php";
     require_once "app/libs/controller.php";
     require_once "app/libs/model.php";
     require_once "app/libs/view.php";

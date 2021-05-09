@@ -1,4 +1,5 @@
 <?php
+require_once MODELS.'galeriaModels.php';
 class AdminViewsController extends Controller
 {
     function __construct()
@@ -25,7 +26,9 @@ class AdminViewsController extends Controller
     }
     function cms_galeria()
     {
-        parent::render("admin/galeria");
+        $galeria = new GaleriaModels();
+        $data = $galeria->listar();
+        parent::render("admin/galeria", $data);
     }
     function cms_email()
     {

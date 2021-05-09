@@ -12,7 +12,7 @@ class UploadFile{
     function __construct($_key, $_fileSavePath = 'default', $_maxSize = 5, $_allowedFilesTypes = [])
     {
         $this->key = $_key;
-        $this->fileSavePath =  $_fileSavePath.'/';
+        $this->fileSavePath =  $_fileSavePath.DS;
         $this->allowedFilesTypes = (!empty($_allowedFilesTypes)) ? $_allowedFilesTypes : ['png','jpg','jpeg','pdf'];
         $this->maxFileSizeBytes = $_maxSize * 1048576;
         $this->maxFileSizeMb = $_maxSize;

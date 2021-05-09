@@ -6,7 +6,8 @@
 <script src="<?php echo PLUGINS; ?>vendors/fastclick/lib/fastclick.js"></script>
 <!-- NProgress -->
 <script src="<?php echo PLUGINS; ?>vendors/nprogress/nprogress.js"></script>
-
+<!-- ToastJs -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <!-- Custom Theme Scripts -->
 <script src="<?php echo JS; ?>custom.min.js"></script>
 <script src="<?php echo JS; ?>custom_cms.js"></script>

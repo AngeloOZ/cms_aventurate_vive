@@ -55,11 +55,10 @@ define('UPLOADS', ASSETS.'uploads/');
  * Database Configuration
 */
 define('DB_HOST','localhost');
-define('DB_NAME','aventurate');
-define('DB_USER','root');
-define('DB_PWD','');
+define('DB_NAME','agencia_aventurate_vive');
+define('DB_USER','admin_cms');
+define('DB_PWD','d*e09LqhH_5H148X');
 define('DB_CHARSET','utf8mb4');
-
 /*
 * Email configuration
 */

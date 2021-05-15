@@ -78,13 +78,7 @@
                 </div>
             </div>
             <!-- footer content -->
-            <footer>
-                <div class="pull-right">
-                    Gentelella - Bootstrap Admin Template by Colorlib</a>
-                </div>
-                <div class="clearfix"></div>
-            </footer>
-            <!-- /footer content -->
+            <?php require_once MODULOS_ADMIN.'footer_section.php'; ?>
         </div>
     </div>
     <?php

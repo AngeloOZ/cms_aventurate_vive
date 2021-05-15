@@ -38,6 +38,7 @@ define('VIEWS', TEMPLATE.'views'.DS);
 define('MODULOS_ADMIN', TEMPLATE.'modulos_admin'.DS);
 define('MODULOS_PAGE', TEMPLATE.'modulos_page'.DS);
 define('UPLOADS_FILES', ROOT.'assets'.DS.'uploads'.DS);
+define('UPLOADS_IMAGE_WEB', ROOT.'assets'.DS.'images'.DS.'web'.DS);
 
 /*
 * Paths with absoluted URL

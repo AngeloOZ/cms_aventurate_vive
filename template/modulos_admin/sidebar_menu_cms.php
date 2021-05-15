@@ -5,13 +5,13 @@
                 <a href="<?php echo URL.'admin'; ?>"><i class="fa fa-home"></i>Inicio</a>
             </li>
             <li>
-                <a href="<?php echo URL.'cms_tours'; ?>"><i class="fa fa-globe"></i>Tours</a>
+                <a href="<?php echo URL.'admin-tours'; ?>"><i class="fa fa-globe"></i>Tours</a>
             </li>
             <li>
-                <a href="<?php echo URL.'cms_galeria'; ?>"><i class="fa fa-photo"></i>Galeria</a>
+                <a href="<?php echo URL.'admin-galeria'; ?>"><i class="fa fa-photo"></i>Galeria</a>
             </li>
             <li>
-                <a href="<?php echo URL.'cms_email'; ?>"><i class="fa fa-envelope"></i>Correos</a>
+                <a href="<?php echo URL.'admin-email'; ?>"><i class="fa fa-envelope"></i>Correos</a>
             </li>
             <li>
                 <a>
@@ -20,8 +20,9 @@
                     <span class="fa fa-chevron-down"></span>
                 </a>
                 <ul class="nav child_menu">
-                    <li><a href="#">Pagina principal</a></li>
+                    <li><a href="<?php echo URL.'admin-landing'; ?>">Pagina principal</a></li>
                     <li><a href="#">Anuncios</a></li>
+                    <li><a href="<?php echo URL.'admin-paquetes'; ?>">Paquetes</a></li>
                     <li><a href="#">Contactos</a></li>
                     <li>
                         <a>Idiomas<span class="fa fa-chevron-down"></span></a>

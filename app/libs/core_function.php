@@ -11,3 +11,13 @@ function print_message_json(int $status_code, string $message, array $other = []
     echo json_encode($json);
     http_response_code($status_code);
 }
+
+function redirect_to(string $controller = "admin"){
+    header("location: ".URL.$controller);
+    die;
+}
+function validate_request_enviroment(string $method = "GET", string $controller = "admin"){
+    if($_SERVER["REQUEST_METHOD"] != $method) redirect_to($controller);
+    if(!isset($_SERVER["HTTP_X_MODE_REQUEST"])) redirect_to($controller);
+    if($_SERVER["HTTP_X_MODE_REQUEST"] !== "AJAX") redirect_to($controller);
+}

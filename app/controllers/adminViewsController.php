@@ -13,28 +13,8 @@ class AdminViewsController extends Controller
         if ($state === "ok") {
             parent::render('admin/index');
         } else {
-            header("location: " . URL . 'login_cms');
+            header("location: " . URL . 'admin_login');
         }
     }
-    function cms_login()
-    {
-        parent::render("admin/login");
-    }
-    function cms_tours()
-    {
-        echo strtoupper(__FUNCTION__);
-    }
-    function cms_galeria()
-    {
-        $galeria = new GaleriaModels();
-        $data = $galeria->listar();
-        parent::render("admin/galeria", $data);
-    }
-    function cms_email()
-    {
-        echo strtoupper(__FUNCTION__);
-    }
-    function cms_lockscreen(){
-        echo strtoupper(__FUNCTION__);
-    }
+    
 }

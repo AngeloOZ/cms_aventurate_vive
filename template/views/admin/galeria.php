@@ -60,7 +60,7 @@
                                           <p><?php echo $photo["caption_photo"]; ?></p>
                                           <div class="tools tools-bottom">
                                              <a class="btn_edit_photos" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="fa fa-pencil"></i></a>
-                                             <a href="#"><i class="fa fa-times"></i></a>
+                                             <a class="btn_delete_photos" href="#"><i class="fa fa-times"></i></a>
                                           </div>
                                        </div>
                                     </div>
@@ -113,7 +113,7 @@
                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="input_file_photo">Archivo <span class="required">*</span>
                            </label>
                            <div class="col-md-6 col-sm-6 ">
-                              <input type="file" id="input_file_photo" name="input_file_photo" required="required" class="form-control">
+                              <input type="file" id="input_file_photo" name="input_file_photo" required="required" class="form-control" accept="image/*">
                            </div>
                         </div>
                         <input type="hidden" name="input_id_photo" id="input_id_photo">
@@ -137,13 +137,7 @@
             </div>
          </div>
          <!-- footer content -->
-         <footer>
-            <div class="pull-right">
-               Gentelella - Bootstrap Admin Template by Colorlib</a>
-            </div>
-            <div class="clearfix"></div>
-         </footer>
-         <!-- /footer content -->
+         <?php require_once MODULOS_ADMIN.'footer_section.php'; ?>
       </div>
    </div>
    <?php

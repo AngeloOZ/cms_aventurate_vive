@@ -36,6 +36,8 @@ class GaleriaModels extends Model{
             $result = Model::query($query, $data);
             if($result[0]){
                 return ["ok", $result[1]]; 
+            }else{
+                return null;
             }
         }
         catch(Exception $error){
@@ -55,6 +57,8 @@ class GaleriaModels extends Model{
             $result = parent::query($query, $data);
             if($result){
                 return "ok"; 
+            }else{
+                return null;
             }
         }
         catch(Exception $error){
@@ -62,7 +66,17 @@ class GaleriaModels extends Model{
         }
     }
 
-    function eliminar(){
-        
+    function eliminar($id){
+        try {
+            $query = "DELETE FROM {$this->table} WHERE id_photo = :id_photo";
+            $result = parent::query($query, [":id_photo"=>$id]);
+            if($result){
+                return "ok";
+            }else{
+                return null;
+            }
+        } catch (Exception $th) {
+            return $th->getMessage();
+        }
     }
 }

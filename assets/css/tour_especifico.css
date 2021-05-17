@@ -555,7 +555,7 @@ img {
     z-index: 11000;
     visibility: hidden;
     opacity: 0;
-    transition: 0.3s ease-in;
+    /* transition: 0.3s ease-in; */
 }
 #solicitar-tour:target{
     opacity: 1;

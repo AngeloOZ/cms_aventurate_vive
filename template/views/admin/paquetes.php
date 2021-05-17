@@ -9,9 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <?php require_once INCLUDES . 'header_enlaces_admin.php'; ?>
-    <!-- https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
-
     <title>CMS - Paquetes</title>
 </head>
 
@@ -40,144 +38,44 @@
                 <div class="">
                     <div class="page-title">
                         <div class="title_left">
-                            <h3>Tables <small>Some examples to get you started</small></h3>
-                            <br />
+                            <h3>Listado de tours</h3>
+                            <br><br>
+                        </div>
+                        <div class="title_right">
+                            <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                                <div class="row">
+                                    <button class="btn btn-primary col-md-7 alignright" data-toggle="modal" data-target=".bs-example-modal-sm">Añadir nuevo tour</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="clearfix"></div>
                     <div class="container">
-                        <table id="example" class="table table-striped table-bordered" style="width:100%">
+                        <table id="tabla-tours" class="table table-striped table-bordered" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
-                                    <th>Age</th>
-                                    <th>Start date</th>
-                                    <th>Salary</th>
+                                    <th>N°</th>
+                                    <th>Titulo</th>
+                                    <th>Descripción</th>
+                                    <th>Imagen</th>
+                                    <th>Url</th>
+                                    <th>Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Tiger Nixon</td>
-                                    <td>System Architect</td>
-                                    <td>Edinburgh</td>
-                                    <td>61</td>
-                                    <td>2011/04/25</td>
-                                    <td>$320,800</td>
-                                </tr>
-                                <tr>
-                                    <td>Garrett Winters</td>
-                                    <td>Accountant</td>
-                                    <td>Tokyo</td>
-                                    <td>63</td>
-                                    <td>2011/07/25</td>
-                                    <td>$170,750</td>
-                                </tr>
-                                <tr>
-                                    <td>Ashton Cox</td>
-                                    <td>Junior Technical Author</td>
-                                    <td>San Francisco</td>
-                                    <td>66</td>
-                                    <td>2009/01/12</td>
-                                    <td>$86,000</td>
-                                </tr>
-                                <tr>
-                                    <td>Cedric Kelly</td>
-                                    <td>Senior Javascript Developer</td>
-                                    <td>Edinburgh</td>
-                                    <td>22</td>
-                                    <td>2012/03/29</td>
-                                    <td>$433,060</td>
-                                </tr>
-                                <tr>
-                                    <td>Airi Satou</td>
-                                    <td>Accountant</td>
-                                    <td>Tokyo</td>
-                                    <td>33</td>
-                                    <td>2008/11/28</td>
-                                    <td>$162,700</td>
-                                </tr>
-                                <tr>
-                                    <td>Brielle Williamson</td>
-                                    <td>Integration Specialist</td>
-                                    <td>New York</td>
-                                    <td>61</td>
-                                    <td>2012/12/02</td>
-                                    <td>$372,000</td>
-                                </tr>
-                                <tr>
-                                    <td>Herrod Chandler</td>
-                                    <td>Sales Assistant</td>
-                                    <td>San Francisco</td>
-                                    <td>59</td>
-                                    <td>2012/08/06</td>
-                                    <td>$137,500</td>
-                                </tr>
-                                <tr>
-                                    <td>Michael Bruce</td>
-                                    <td>Javascript Developer</td>
-                                    <td>Singapore</td>
-                                    <td>29</td>
-                                    <td>2011/06/27</td>
-                                    <td>$183,000</td>
-                                </tr>
-                                <tr>
-                                    <td>Donna Snider</td>
-                                    <td>Customer Support</td>
-                                    <td>New York</td>
-                                    <td>27</td>
-                                    <td>2011/01/25</td>
-                                    <td>$112,000</td>
-                                </tr>
-                                <tr>
-                                    <td>Herrod Chandler</td>
-                                    <td>Sales Assistant</td>
-                                    <td>San Francisco</td>
-                                    <td>59</td>
-                                    <td>2012/08/06</td>
-                                    <td>$137,500</td>
-                                </tr>
-                                <tr>
-                                    <td>Michael Bruce</td>
-                                    <td>Javascript Developer</td>
-                                    <td>Singapore</td>
-                                    <td>29</td>
-                                    <td>2011/06/27</td>
-                                    <td>$183,000</td>
-                                </tr>
-                                <tr>
-                                    <td>Donna Snider</td>
-                                    <td>Customer Support</td>
-                                    <td>New York</td>
-                                    <td>27</td>
-                                    <td>2011/01/25</td>
-                                    <td>$112,000</td>
-                                </tr>
-                                <tr>
-                                    <td>Herrod Chandler</td>
-                                    <td>Sales Assistant</td>
-                                    <td>San Francisco</td>
-                                    <td>59</td>
-                                    <td>2012/08/06</td>
-                                    <td>$137,500</td>
-                                </tr>
-                                <tr>
-                                    <td>Michael Bruce</td>
-                                    <td>Javascript Developer</td>
-                                    <td>Singapore</td>
-                                    <td>29</td>
-                                    <td>2011/06/27</td>
-                                    <td>$183,000</td>
-                                </tr>
-                                <tr>
-                                    <td>Donna Snider</td>
-                                    <td>Customer Support</td>
-                                    <td>New York</td>
-                                    <td>27</td>
-                                    <td>2011/01/25</td>
-                                    <td>$112,000</td>
-                                </tr>
+                                <?php for ($i = 1; $i <= 5; $i++) : ?>
+                                    <tr>
+                                        <td><?php echo $i; ?></td>
+                                        <td>Trip imbabura</td>
+                                        <td>Ven y disfruta de la provincia de Imbabura fascinante y única reconocida por ser la provincia de los lagos, por su cultura y artesanías ideal para un turismo de aventura y contacto con la naturaleza y sus artesanías.</td>
+                                        <td class="td-image"><img src="<?php echo UPLOADS . 'paquetes/basilica.jpg'; ?>" alt=""></td>
+                                        <td class="td-url"><a href="http://localhost/aventurateyvive/tours/alskdnalsknca-vakjs-sdvnls" target="_blank" rel="noopener noreferrer">http://localhost/aventurateyvive/tours/alskdnalsknca-vakjs-sdvnls</a></td>
+                                        <td class="td-actions" data-id-tours="<?php echo $i; ?>">
+                                            <button class="btn btn-warning font-size-18px"><i class="fa fa-pencil"></i></button>
+                                            <button class="btn btn-danger font-size-18px"><i class="fa fa-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                <?php endfor; ?>
                             </tbody>
                         </table>
                     </div>
@@ -185,72 +83,50 @@
             </div>
             <!-- /page content -->
 
-            <!-- Large modal -->
-            <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
+            <!-- Small modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
+
+            <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
                             </button>
-                            <h4 class="modal-title" id="myModalLabel">Gestor de galeria</h4>
+                            <h4 class="modal-title" id="myModalLabel2">Nuevo tour</h4>
                         </div>
                         <div class="modal-body">
-                            <form id="" data-action-url="<?php echo URL; ?>" data-parsley-validate="" class="form-horizontal form-label-left" _lpchecked="1" enctype="multipart/form-data">
-                                <div class="item form-group">
-                                    <p>Forma de subir imagén</p>
-                                    <div class="col-md-6 col-sm-6 ">
-                                        <label for="upfile">Subir archivo</label>
-                                        <input type="radio" name="typeUpload" id="upfile" checked class="type-up-file">
-                                        <span style="margin: 0 10px;"></span>
-                                        <label for="url">URL</label>
-                                        <input type="radio" name="typeUpload" id="url" class="type-up-file">
+                            <div class="container">
+                                <form action="<?php echo URL.'admin-paquetes/registrar'; ?>" method="POST" class="container" id="form-generador-lugares">
+                                    <div class="form-group">
+                                        <label for="">Cuantos lugares tiene el tour</label>
+                                        <input type="number" name="number_places" class="form-control" id="input-number-tours" min="1" max="10" value="0" required>
                                     </div>
-                                </div>
-                                <div class="item form-group">
-                                    <label class="col-form-label col-md-3 col-sm-3 label-align" for="input-desc-photo">Descripción<span class="required">*</span>
-                                    </label>
-                                    <div class="col-md-6 col-sm-6 ">
-                                        <input type="text" id="input_desc_photo" name="input_desc_photo" required="required" class="form-control" placeholder="Descripción de foto">
+                                    <div class="container" id="contenedor-atractivos"></div>
+                                    <br>
+                                    <div class="form-group">
+                                        <input type="submit" class="form-control btn btn-primary" value="Agregar">
                                     </div>
-                                </div>
-                                <div class="item form-group">
-                                    <label class="col-form-label col-md-3 col-sm-3 label-align" for="input_file_photo">Archivo <span class="required">*</span>
-                                    </label>
-                                    <div class="col-md-6 col-sm-6 ">
-                                        <input type="file" id="input_file_photo" name="input_file_photo" required="required" class="form-control" accept="image/*">
-                                    </div>
-                                </div>
-                                <input type="hidden" name="input_id_photo" id="input_id_photo">
-                                <div class="ln_solid"></div>
-                                <div class="item form-group ">
-                                    <div class="col-md-6 col-sm-6 offset-md-3 alignright">
-                                        <button class="btn btn-primary" type="reset">Limpiar</button>
-                                        <button type="submit" class="btn btn-success">Guardar</button>
-                                    </div>
-                                </div>
-                            </form>
-                            <div class="ln_solid"></div>
-                            <div id="preview_photo" class="preview_photo">
-                                <img id="preview_photo_img" src="" alt="">
+                                </form>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-default close_modal" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                         </div>
+
                     </div>
                 </div>
             </div>
+            <!-- /modals -->
             <!-- footer content -->
-            <?php require_once MODULOS_ADMIN.'footer_section.php'; ?>
+            <?php require_once MODULOS_ADMIN . 'footer_section.php'; ?>
         </div>
     </div>
     <?php include INCLUDES . 'footer_enlaces_admin.php'; ?>
-    <!-- https://code.jquery.com/jquery-3.5.1.js -->
     <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
-            $('#example').DataTable({
+            $('#tabla-tours').DataTable({
                 "language": {
                     "lengthMenu": "Mostrar _MENU_ tours por página",
                     "zeroRecords": "No se encontraron resultados",

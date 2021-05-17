@@ -275,8 +275,6 @@
                                     <small id="" class="form-text text-muted">Si no desea actualizar la foto deje vacío</small>
                                  </div>
                               </div>
-
-
                               <div class="ln_solid"></div>
                               <div class="form-group alignright">
                                  <button type="reset" class="btn btn-danger">Cancelar</button>
@@ -302,7 +300,6 @@
       $('#summernote').summernote({
          height: 150,
          codeviewFilter: true,
-         // codeviewIframeFilter: true,
          toolbar: [
             ['style', ['bold', 'italic', 'underline', 'clear']],
             ['fontname', ['fontname']],

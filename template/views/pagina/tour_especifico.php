@@ -1,11 +1,12 @@
-<?php require_once MODULOS_PAGE.'header_section.php' ?>
+<?php require_once MODULOS_PAGE . 'header_section.php' ?>
+
 <body>
     <!-- section menu contact -->
-    <?php require_once MODULOS_PAGE.'nav_contact.php' ?>
+    <?php require_once MODULOS_PAGE . 'nav_contact.php' ?>
     <!-- section menu main -->
-    <?php require_once MODULOS_PAGE.'nav_menu_main.php'?>
+    <?php require_once MODULOS_PAGE . 'nav_menu_main.php' ?>
     <!-- Background hero header -->
-    <section class="header_information parallax" data-parallax-image="upload/tour/image/basilica.jpg">
+    <section class="header_information parallax" data-parallax-image="<?php echo UPLOADS . 'paquetes/'; ?>basilica.jpg">
         <div class="text_infomation">
             <h1 class="titulo">Trip Imbabura</h1>
             <p class="descripcion">Ven y disfruta de la provincia de Imbabura fascinante y única reconocida por ser la
@@ -31,7 +32,7 @@
                         <div class="subcontenedor_atractivos">
                             <div class="sub_atractivo">
                                 <div class="atractivos__image">
-                                    <img class="lightbox" src="upload/tour/image/yaguarcocha.jpg" alt="Yahuarcocha">
+                                    <img class="lightbox" src="<?php echo UPLOADS.'paquetes/'; ?>yaguarcocha.jpg" alt="Yahuarcocha">
                                 </div>
                                 <div class="atractivos__description">
                                     <h4>Laguna de Yahuarcocha</h4>
@@ -44,7 +45,7 @@
                             </div>
                             <div class="sub_atractivo">
                                 <div class="atractivos__image">
-                                    <img class="lightbox" src="upload/tour/image/arcangel.jpg" alt="arcangel">
+                                    <img class="lightbox" src="<?php echo UPLOADS.'paquetes/'; ?>arcangel.jpg" alt="arcangel">
                                 </div>
                                 <div class="atractivos__description">
                                     <h4>Mirador San Miguel Arcángel</h4>
@@ -75,8 +76,7 @@
                         <div class="subcontenedor_atractivos">
                             <div class="sub_atractivo">
                                 <div class="atractivos__image">
-                                    <img class="lightbox" class="lightbox" src="upload/tour/image/ponchos.jpg"
-                                        alt="ponchos">
+                                    <img class="lightbox" class="lightbox" src="<?php echo UPLOADS.'paquetes/'; ?>ponchos.jpg" alt="ponchos">
                                 </div>
                                 <div class="atractivos__description">
                                     <h4>Plaza de los ponchos</h4>
@@ -88,8 +88,7 @@
                             </div>
                             <div class="sub_atractivo">
                                 <div class="atractivos__image">
-                                    <img class="lightbox" src="upload/tour/image/Lago_San_pablo_1.jpg"
-                                        alt="Lago san pablo">
+                                    <img class="lightbox" src="<?php echo UPLOADS.'paquetes/'; ?>Lago_San_pablo_1.jpg" alt="Lago san pablo">
                                 </div>
                                 <div class="atractivos__description">
                                     <h4>Lago San Pablo</h4>
@@ -100,7 +99,7 @@
                             </div>
                             <div class="sub_atractivo">
                                 <div class="atractivos__image">
-                                    <img class="lightbox" src="upload/tour/image/cascada.jpg" alt="cascada">
+                                    <img class="lightbox" src="<?php echo UPLOADS.'paquetes/'; ?>cascada.jpg" alt="cascada">
                                 </div>
                                 <div class="atractivos__description">
                                     <h4>Cascada de Peguche</h4>
@@ -129,7 +128,7 @@
                         <div class="subcontenedor_atractivos">
                             <div class="sub_atractivo">
                                 <div class="atractivos__image">
-                                    <img class="lightbox" src="upload/tour/image/cuicocha.jpg" alt="Yahuarcocha">
+                                    <img class="lightbox" src="<?php echo UPLOADS.'paquetes/'; ?>cuicocha.jpg" alt="Yahuarcocha">
                                 </div>
                                 <div class="atractivos__description">
                                     <h4>Laguna de Cuicocha</h4>
@@ -150,9 +149,7 @@
     <section class="map_ruta">
         <h2 class="subtitle color_salmon map_ruta_titulo">Ruta</h2>
         <div class="map_ruta_iframe">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d7976.536777025031!2d-79.0059225576935!3d-1.5970974972014693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d-1.5999349999999999!2d-78.996832!4m5!1s0x91d317bab63ec73d%3A0x9b76418348c4cc57!2sCaluma!3m2!1d-1.5943091!2d-79.0051146!5e0!3m2!1ses-419!2sec!4v1619126079564!5m2!1ses-419!2sec"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d7976.536777025031!2d-79.0059225576935!3d-1.5970974972014693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d-1.5999349999999999!2d-78.996832!4m5!1s0x91d317bab63ec73d%3A0x9b76418348c4cc57!2sCaluma!3m2!1d-1.5943091!2d-79.0051146!5e0!3m2!1ses-419!2sec!4v1619126079564!5m2!1ses-419!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
     <!-- Seccion itinerario -->
@@ -260,7 +257,7 @@
         <div class="ctn_escapes">
             <div class="escape">
                 <div class="escape_img">
-                    <img src="image/tours_3.png" loading="lazy" alt="">
+                    <img src="<?php echo IMAGES.'web/'; ?>/tours_3.png" loading="lazy" alt="">
                 </div>
                 <div class="escape_infor">
                     <h3>Trip Imbabura</h3>
@@ -275,7 +272,7 @@
             </div>
             <div class="escape">
                 <div class="escape_img">
-                    <img src="image/tours_4.png" loading="lazy" alt="">
+                    <img src="<?php echo IMAGES.'web/'; ?>tours_4.png" loading="lazy" alt="">
                 </div>
                 <div class="escape_infor">
                     <h3>Escurcion Guiada</h3>
@@ -314,18 +311,18 @@
                     <option value="">Region Insular</option>
                 </select>
                 <textarea name="" id="" class="form_modal_tour_textarea" cols="30" rows="2" placeholder="Mensaje"></textarea>
-                <input type="submit" value="Reservar ahora" class="form_modal_tour_submit">            
+                <input type="submit" value="Reservar ahora" class="form_modal_tour_submit">
             </form>
         </div>
     </div>
     <a href="#solicitar-tour" class="booking_tour">
         <span class="booking_tour_text">Haz tu reservación</span>
-        <img src="./image/luggage.svg" alt="">
+        <img src="<?php echo IMAGES.'web/'; ?>luggage.svg" alt="">
     </a>
     <!-- secction footer -->
-    <?php require_once MODULOS_PAGE.'footer_section.php'; ?>
+    <?php require_once MODULOS_PAGE . 'footer_section.php'; ?>
     <!-- enlaces de js -->
-    <?php require_once MODULOS_PAGE.'enlaces_footer.php'; ?>
+    <?php require_once INCLUDES . 'footer_enlaces_web.php'; ?>
 </body>
 
 </html>
